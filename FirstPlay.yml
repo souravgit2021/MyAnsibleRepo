@@ -1,18 +1,18 @@
 ---
-name: My First Play
-hosts: all
-tasks:
-  - name: Adding A User
-    user:
+- name: My First Play
+  hosts: all
+  tasks:
+   - name: Adding A User
+     user:
       name: bob
       uid: 1012
       state: present
-  
-  - name: Installing The httpd package
-    yum: 
+     
+   - name: Installing The httpd package
+     yum: 
       name: httpd
       state: present
-  - name: Starting The httpd package
-    service:
+   - name: Starting The httpd package
+     service:
       name: httpd
-      state: enabled
+      state: started
