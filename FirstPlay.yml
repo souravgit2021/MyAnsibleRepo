@@ -12,3 +12,7 @@ tasks:
     yum: 
       name: httpd
       state: present
+  - name: Starting The httpd package
+    service:
+      name: httpd
+      state: enabled
